@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>{dede:field.title/}-{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="copyright" content="">
+<link href="/skin/css/css.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="/skins/css/default.css">
+<script src="/skin/js/jquery.js" type="text/javascript"></script>
+<script src="/skin/js/jquery.form.js" type="text/javascript"></script>
+<script src="/skin/js/jquery.json.js" type="text/javascript"></script>
+<script src="/skin/js/artDialog.js" type="text/javascript"></script>
+<script src="/skin/js/artDialog.iframeTools.js" type="text/javascript"></script>
+<script src="/skin/js/artDialog.iframeTools.js" type="text/javascript"></script>
+<script src="/skin/js/jquery.SuperSlide.2.1.1.js" type="text/javascript"></script>
+<script src="/skin/js/jquery.hhService.js" type="text/javascript"></script>
+<script type="text/javascript" src="/skin/js/slide.js"></script>
+<script type="text/javascript" src="/skin/js/a.js"></script>
+</head>
+
+<body>
+
+<!--top --> 
+{dede:include filename="head.htm"/} 
+<!--banner --> 
+
+<a href="" target="_blank" title="{dede:field.title/}">
+<div class="ny_banner" style="background: url(/skin/images/14298422792456.jpg) no-repeat center; height:400px; width:100%; position:relative;"></div>
+</a> 
+
+<!--content -->
+<div class="wrap mt mb"> {dede:include filename="left.htm"/}
+  <div class="right f_r">
+    <h3 class="dbt"><i>您当前的位置：{dede:field name='position'/}</i> <span>{dede:field name='typename'/}</span></h3>
+    <div class="mt">
+      <ul class="wzli">
+        {dede:list pagesize="4" infolen="180"}
+        <li><a href="[field:arcurl/]"><img src="[field:picname/]"></a>
+          <h4><a href="[field:arcurl/]" title="[field:title/]">[field:title/]</a></h4>
+          <span>文章来源：<b>[field:adminname/]</b> 上传时间：<b>[field:pubdate function="GetDateTimeMK(@me)" /]</b> 阅览次数：<b>[field:click/]</b></span>
+          <p>[field:infos/]...<a href="[field:arcurl/]">【详细】</a></p>
+        </li>
+        {/dede:list}
+      </ul>
+      <div class="clear"></div>
+      <div class="manu"> {dede:pagelist listitem="index,info,next,pageno" listsize="5"/} </div>
+    </div>
+  </div>
+  <div class="clear"></div>
+</div>
+
+<!--botttom --> 
+{dede:include filename="footer.htm"/}
+</body>
+</html>

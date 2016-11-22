@@ -1,0 +1,1 @@
+<td width="10%"><a href="[field:typelink /]"><img src="/skin/images/fh.gif"></a></td>

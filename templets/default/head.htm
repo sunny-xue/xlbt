@@ -1,0 +1,26 @@
+<div id="top">
+  <div class="wrap"> <a href="/" title="{dede:global.cfg_webname/}"><img src="/skin/images/logo.png" style="margin-top:14px;"></a>
+    <ul id="top_li">
+      <li class="wx"><a href="#" id="wei">微信关注</a></li>
+      <li class="qq"> <a style="CURSOR: pointer" onclick="javascript:window.open('http://wpa.qq.com/msgrd?v=3&uin={dede:global.cfg_qq/}&site=www.cactussoft.cn&menu=yes');" border="0" src="http://wpa.qq.com/pa?p=2:{dede:global.cfg_qq/}:1" alt="点击这里给我发消息" target="_blank">QQ交谈</a> </li>
+      <li class="ly"><a href="/a/contact/">在线留言</a></li>
+    </ul>
+    <div id="top_tel"><b>{dede:global.cfg_tel/}</b></div>
+  </div>
+</div>
+<!--menu -->
+<div id="menu">
+  <ul id="nav">
+    <li class="mainlevel" onmouseout="this.className='mainlevel'" onmouseover="this.className='mainlevel1'" id="mainlevel_01"><a href="/">网站首页</a></li>
+	{dede:channelartlist  typeid='top'}
+    <li class="mainlevel" onmouseout="this.className='mainlevel'" onmouseover="this.className='mainlevel1'" id="mainlevel_0{dede:global name=itemindex runphp='yes'}@me=@me+1;{/dede:global}"><a href="{dede:field name='typeurl'/}">{dede:field name='typename'/}</a>
+      <ul style="display: none;">
+	  {dede:channel type='son'}
+        <!--<li><a href="[field:typelink/]">[field:typename/]</a></li>-->
+	  {/dede:channel}	
+      </ul>
+    </li>
+	
+	{/dede:channelartlist}
+  </ul>
+</div>
